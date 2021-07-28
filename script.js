@@ -56,5 +56,7 @@ function calcularPeso(){
             break;
     }
     // Mostrando valores
+    $("p#peso").replaceWith('<p id="peso">En la <strong>Tierra</strong> tu peso es de<br><strong>'+peso_usuario+'</strong> kg</p>');
+    $("p#pesoCalculado").replaceWith('<p id="pesoCalculado">En <strong>'+planetaSeleccionado+'</strong> tu peso sería de<br><strong>'+(peso_final).toFixed(1)+'</strong> kg</p>');
     //console.log(peso_usuario);
 }
