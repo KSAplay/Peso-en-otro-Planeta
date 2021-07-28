@@ -16,7 +16,7 @@ select,input,option{
 }
 
 input{
-    width: 25%;
+    width: 15%;
     background: none;
     color: #F5F4F6;
     font-size: 25px;
@@ -24,6 +24,7 @@ input{
 }
 
 select{
+    font-weight: bold;
     width: 30%;
 }
 
@@ -58,6 +59,15 @@ select{
 
 .ladoDerecho{
     float: right;
+}
+
+.texto-ingresar{
+    font-size: 20px;
+    margin: 0;
+}
+
+.head{
+    height: 50px;
 }
 
 img,#imagen{

@@ -18,21 +18,31 @@
             <h1 class="titulo">¿Cuánto pesarías en otros planetas?</h1>
             <p class="descripcion">Averigua cuanto pesarías si vivieras en uno de estos planetas</p>
         </div>
+        <br>
         <div class="ladoIzquierdo">
-            <input id="pesoUsuario" placeholder="00.0" type="number" min="1" max="350" step="0.1" onchange="calcularPeso()"><br>
+            <div class="head">
+                <p class="texto-ingresar">Tu peso:
+                    <input id="pesoUsuario" placeholder="00.0" type="number" min="1" max="350" step="0.1" onchange="calcularPeso()">
+                    kg
+                </p>
+            </div>
+            
             <img src="img/Tierra.png" alt="Tierra" height="38.5%" width="50%">
             <p id="peso">Ingresa tu peso actual</p>
         </div>
         <div class="ladoDerecho">
-            <select class="planetas" onChange="cambiarImagen()">
-                <option>Mercurio</option>
-                <option>Venus</option>
-                <option>Marte</option>
-                <option>Júpiter</option>
-                <option selected>Saturno</option>
-                <option>Neptuno</option>
-                <option>Urano</option>
-            </select><br>
+            <div class="head">
+                <select class="planetas" onChange="cambiarImagen()">
+                    <option>Mercurio</option>
+                    <option>Venus</option>
+                    <option>Marte</option>
+                    <option>Júpiter</option>
+                    <option selected>Saturno</option>
+                    <option>Neptuno</option>
+                    <option>Urano</option>
+                </select>
+            </div>
+            
             <img id="imagen" src="img/Saturno.png" alt="Saturno" height="38.5%" width="50%">
             <p id="pesoCalculado">Ingresa tu peso para calulcar</p>
         </div>

@@ -28,6 +28,9 @@ function cambiarImagen(){
 function calcularPeso(){
     // Obteniendo el peso
     peso_usuario = $("input#pesoUsuario").val();
+    if(peso_usuario == ""){
+        peso_usuario = 0.0;
+    }
     // Calculando su valor según el planeta seleccionado
     switch(planetaSeleccionado){
         case "Marte":
@@ -53,7 +56,5 @@ function calcularPeso(){
             break;
     }
     // Mostrando valores
-    $("p#peso").replaceWith('<p id="peso">En la <strong>Tierra</strong> su peso es de<br><strong>'+peso_usuario+'</strong> kilos</p>');
-    $("p#pesoCalculado").replaceWith('<p id="pesoCalculado">En <strong>'+planetaSeleccionado+'</strong> su peso sería de<br><strong>'+(peso_final).toFixed(1)+'</strong> kilos</p>');
     //console.log(peso_usuario);
 }
