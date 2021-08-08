@@ -8,8 +8,6 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
         <!-- Importación del tipo de fuente: Lato Regular -->
         <style>@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');</style>
-        <!-- Importación de JQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="cabecera">
@@ -20,17 +18,19 @@
         <div class="ladoIzquierdo">
             <div class="head">
                 <p class="texto-ingresar">Tu peso:
-                    <input id="pesoUsuario" placeholder="00.0" type="number" min="1" max="350" step="0.1" onchange="calcularPeso()">
+                    <input id="pesoUsuario" placeholder="00.0" type="number" min="1" max="350" step="0.1">
                     kg
                 </p>
             </div>
             
-            <img src="img/Tierra.png" alt="Tierra" height="38.5%" width="50%">
-            <p id="peso">Ingresa tu peso actual</p>
+            <img id="tierra" src="img/Tierra.png" alt="Tierra" height="38.5%" width="50%">
+            <div id="peso-container">
+                <p id="peso">Ingresa tu peso actual</p>
+            </div>
         </div>
         <div class="ladoDerecho">
             <div class="head">
-                <select class="planetas" onChange="cambiarImagen()">
+                <select class="planetas" id="planetas">
                     <option>Mercurio</option>
                     <option>Venus</option>
                     <option>Marte</option>
@@ -40,15 +40,18 @@
                     <option>Urano</option>
                 </select>
             </div>
-            
-            <img id="imagen" src="img/Saturno.png" alt="Saturno" height="38.5%" width="50%">
-            <p id="pesoCalculado">Ingresa tu peso para calulcar</p>
+            <div id="img-container">
+                <img id="imagen" src="img/Saturno.png" alt="Saturno" height="38.5%" width="50%">
+            </div>
+            <div id="pesoCalculado-container">
+                <p id="pesoCalculado">Ingresa tu peso actual</p>
+            </div>
         </div>
         <div class="flecha">➜</div>
-        <div id="estrellas"></div>
+        <div id="estrellas1"></div>
         <div id="estrellas2"></div>
         <div id="estrellas3"></div>
-        <!-- Anexando eñ script de JavaScript -->
+        <!-- Anexando el script de JavaScript -->
         <script src="script.js" language="javascript" type="text/javascript"></script>
     </body>
 </html>
